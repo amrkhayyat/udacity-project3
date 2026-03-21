@@ -1,0 +1,75 @@
+@use '../utils/utils';
+
+.banner {
+  padding: 150px 20px 100px;
+  background: utils.$light-bg;
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-direction: column;
+
+    @include utils.mobile {
+      flex-direction: column;
+    }
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid utils.$white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  &__text {
+    h2 {
+      font-size: 2.5rem;
+      color: utils.$dark-color;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.1rem;
+      color: utils.$secondary-color;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 15px;
+
+    button {
+      padding: 12px 25px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+
+      &:first-child {
+        background: utils.$primary-color;
+        color: white;
+      }
+
+      &:last-child {
+        background: transparent;
+        border: 2px solid utils.$primary-color;
+        color: utils.$primary-color;
+      }
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+}

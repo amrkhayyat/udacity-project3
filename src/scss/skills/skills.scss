@@ -1,0 +1,70 @@
+@use '../utils/utils';
+
+.skills-page {
+  padding-top: 100px; 
+  min-height: calc(100vh - 150px);
+  background-color: utils.$light-bg;
+}
+
+.skills {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+
+  &__title {
+    font-size: 2.5rem;
+    color: utils.$dark-color;
+    margin-bottom: 15px;
+  }
+
+  &__description {
+    color: utils.$secondary-color;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  &__item {
+    background: utils.$white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: left;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    h3 {
+      color: utils.$primary-color;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      border-bottom: 2px solid utils.$light-bg;
+      padding-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+        color: utils.$dark-color;
+        font-weight: 500;
+        
+        &::before {
+          content: "✔";
+          color: utils.$primary-color;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
