@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="../../dist/main.css">
+</head>
+
+<body>
+
+<header class="header">
+  <nav class="header__nav">
+    <h1 class="header__logo">My Portfolio</h1>
+    <ul class="header__links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="skills.html">Skills</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="contact-page">
+
+  <section class="contact">
+    <h2 class="contact__title">Get In Touch</h2>
+    <p class="contact__subtitle">Have a project in mind? Let's talk.</p>
+
+    <form class="contact__form" id="contactForm" novalidate>
+
+      <div class="contact__field">
+        <label for="name" class="contact__label">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="contact__input"
+          placeholder="Your full name"
+          maxlength="100"
+        />
+        <span class="contact__error" id="nameError"></span>
+      </div>
+
+      <div class="contact__field">
+        <label for="email" class="contact__label">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="contact__input"
+          placeholder="your@email.com"
+        />
+        <span class="contact__error" id="emailError"></span>
+      </div>
+
+      <div class="contact__field">
+        <label for="message" class="contact__label">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          class="contact__textarea"
+          placeholder="Tell me about your project..."
+          maxlength="300"
+        ></textarea>
+        <span class="contact__counter" id="charCounter">300 characters remaining</span>
+        <span class="contact__error" id="messageError"></span>
+      </div>
+
+      <button type="submit" class="contact__btn btn">Send Message</button>
+
+      <p class="contact__success" id="successMsg"></p>
+
+    </form>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© Your Name 2025</p>
+</footer>
+
+<script src="../js/contact.js"></script>
+</body>
+</html>

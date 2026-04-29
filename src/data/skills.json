@@ -1,0 +1,13 @@
+{
+  "description": "I specialize in creating modern, responsive, and user-friendly web interfaces using the following technologies:",
+  "categories": [
+    {
+      "category": "Frontend",
+      "skills": ["HTML5", "CSS3 (Sass/SCSS)", "JavaScript", "BEM Methodology"]
+    },
+    {
+      "category": "Tools",
+      "skills": ["Git & GitHub", "VS Code", "Terminal / Bash", "Responsive Design"]
+    }
+  ]
+}

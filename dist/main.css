@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +22,7 @@ a {
 
 body {
   padding-top: 70px;
+  font-family: sans-serif;
 }
 
 .header {
@@ -32,6 +34,7 @@ body {
   padding: 1rem 0;
   backdrop-filter: blur(10px);
 }
+
 .header__nav {
   max-width: 1100px;
   margin: 0 auto;
@@ -40,21 +43,25 @@ body {
   align-items: center;
   padding: 0 20px;
 }
+
 .header__logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: #2563eb;
 }
+
 .header__links {
   display: flex;
   gap: 20px;
 }
+
 .header__links a {
   text-decoration: none;
   color: #0f172a;
   font-weight: 500;
   transition: color 0.3s;
 }
+
 .header__links a:hover {
   color: #2563eb;
 }
@@ -71,6 +78,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
 .banner__content {
   max-width: 1000px;
   display: flex;
@@ -78,16 +86,19 @@ body {
   gap: 50px;
   flex-direction: column;
 }
+
 @media (max-width: 767px) {
   .banner__content {
     flex-direction: column;
   }
 }
+
 @media (min-width: 768px) {
   .banner__content {
     flex-direction: row;
   }
 }
+
 .banner__image {
   width: 250px;
   height: 250px;
@@ -96,20 +107,24 @@ body {
   border: 5px solid #ffffff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
 .banner__text h2 {
   font-size: 2.5rem;
   color: #0f172a;
   margin-bottom: 1rem;
 }
+
 .banner__text p {
   font-size: 1.1rem;
   color: #64748b;
   margin-bottom: 2rem;
 }
+
 .banner__buttons {
   display: flex;
   gap: 15px;
 }
+
 .banner__buttons button {
   padding: 12px 25px;
   border-radius: 8px;
@@ -118,15 +133,18 @@ body {
   font-weight: bold;
   transition: 0.3s;
 }
+
 .banner__buttons button:first-child {
   background: #2563eb;
   color: white;
 }
+
 .banner__buttons button:last-child {
   background: transparent;
   border: 2px solid #2563eb;
   color: #2563eb;
 }
+
 .banner__buttons button:hover {
   transform: translateY(-3px);
 }
@@ -136,11 +154,13 @@ body {
   background-color: #f1f5f9;
   text-align: center;
 }
+
 .projects__title {
   font-size: 2.2rem;
   margin-bottom: 40px;
   color: #1e293b;
 }
+
 .projects__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -148,27 +168,35 @@ body {
   max-width: 1100px;
   margin: 0 auto;
 }
-.projects__card {
+
+.project-card {
   background: white;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
 }
-.projects__card:hover {
+
+.project-card:hover {
   transform: translateY(-10px);
 }
-.projects__card h3 {
+
+.project-card h3 {
   color: #2563eb;
   margin-bottom: 15px;
 }
-.projects__card p {
+
+.project-card p {
   color: #64748b;
   line-height: 1.6;
 }
+
 .projects__button {
   margin-top: 50px;
 }
+
 .projects__button a {
   background: #1e293b;
   color: white;
@@ -177,7 +205,9 @@ body {
   border-radius: 50px;
   cursor: pointer;
   font-weight: bold;
+  display: inline-block;
 }
+
 .projects__button a:hover {
   background: #2563eb;
 }
@@ -202,52 +232,186 @@ body {
   padding: 40px 20px;
   text-align: center;
 }
+
 .skills__title {
   font-size: 2.5rem;
   color: #0f172a;
   margin-bottom: 15px;
 }
+
 .skills__description {
   color: #64748b;
   margin-bottom: 50px;
   font-size: 1.1rem;
 }
+
 .skills__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
-.skills__item {
+
+.skills__card {
   background: #ffffff;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   text-align: left;
   transition: transform 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
 }
-.skills__item:hover {
+
+.skills__card:hover {
   transform: translateY(-10px);
 }
-.skills__item h3 {
-  color: #2563eb;
+
+.skills__card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 20px;
-  font-size: 1.5rem;
   border-bottom: 2px solid #f8fafc;
   padding-bottom: 10px;
 }
-.skills__item ul {
-  list-style: none;
+
+.skills__category {
+  color: #2563eb;
+  font-size: 1.5rem;
+}
+
+.skills__list {
   padding: 0;
 }
-.skills__item ul li {
+
+.skills__item {
   margin-bottom: 10px;
   color: #0f172a;
   font-weight: 500;
+  display: flex;
+  align-items: center;
 }
-.skills__item ul li::before {
+
+.skills__item::before {
   content: "✔";
   color: #2563eb;
   margin-right: 10px;
 }
 
-/*# sourceMappingURL=main.css.map */
+/* --- Contact Page Styles --- */
+
+.contact-page {
+  padding-top: 100px;
+  min-height: calc(100vh - 150px);
+  background-color: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  max-width: 600px;
+  width: 100%;
+  margin: 40px 20px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.contact__title {
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.contact__subtitle {
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.contact__form {
+  text-align: left;
+}
+
+.contact__field {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.contact__label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.contact__input,
+.contact__textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.contact__textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.contact__error {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: block;
+  min-height: 1.2em;
+}
+
+.contact__counter {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 5px;
+}
+
+.contact__btn {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.contact__btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.contact__success {
+  margin-top: 20px;
+  color: #10b981;
+  font-weight: 600;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
