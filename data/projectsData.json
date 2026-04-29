@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "project_name": "TaskFlow",
+      "short_description": "Short description for project one",
+      "long_description": "This is a longer description for project one explaining what it does in more detail.",
+      "image": "img/project1.jpg",
+      "url": "https://github.com/Mohammad-Fallaha/TaskFlow.git"
+    },
+    {
+      "project_name": "ReUseHub",
+      "short_description": "Short description for project two",
+      "long_description": "This is a longer description for project two explaining what it does in more detail.",
+      "image": "img/project2.jpg",
+      "url": "https://github.com/Web2-ReUseHub/ReUseHub.git"
+    },
+    {
+      "project_name": "udacity project",
+      "short_description": "Short description for project three",
+      "long_description": "This is a longer description for project three explaining what it does in more detail.",
+      "image": "img/project3.jpg",
+      "url": "https://github.com/amrkhayyat/udacity-project.git"
+    }
+  ]
+}
